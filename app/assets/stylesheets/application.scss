@@ -16,6 +16,7 @@
 
 /*@import "bootstrap-sprockets";
 @import "bootstrap";*/
+@import "bootstrap";
 
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Limelight&display=swap");
 
@@ -66,4 +67,13 @@
 .footer-link:hover{
   color: white;
   border-bottom: 2px solid;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn .material-icons {
+  margin-right: 0.3rem;
 }

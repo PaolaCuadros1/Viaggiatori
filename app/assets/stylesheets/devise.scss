@@ -1,0 +1,19 @@
+.devise-container {
+  margin: 30px auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.devise-form {
+  flex: 1;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.devise-form > h2 {
+  text-align: center;
+}

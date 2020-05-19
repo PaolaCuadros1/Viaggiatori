@@ -1,0 +1,68 @@
+<%= form_for([:admin, admin], url: admin.persisted? ? admin_admin_path(id: admin.id) : admin_admins_path, method: admin.persisted? ? :put : :post, local: true, html: { class: 'needs-validation', novalidate: '' }) do |f| %>
+
+  <% if admin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(admin.errors.count, "error") %> prohibited this admin from being saved:</h2>
+
+      <ul>
+      <% admin.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-row">
+    <div class="col-12 col-md-6 form-group mb-2">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, autofocus: true, autocomplete: 'first_name', class: 'form-control', required: 'required', maxlength: 255 %>
+    </div>
+
+    <div class="col-12 col-md-6 form-group mb-2">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name, autocomplete: 'last_name', class: 'form-control', required: 'required', maxlength: 255 %>
+    </div>
+
+    <div class="col-12 col-md-6 form-group mb-2">
+      <%= f.label :age %>
+      <%= f.number_field :age, autocomplete: 'email', class: 'form-control', required: 'required', min: 0, max: 150 %>
+    </div>
+
+    <div class="col-12 col-md-6 form-group mb-2">
+      <%= f.label :city %>
+      <%= f.text_field :city, autocomplete: 'city', class: 'form-control', required: 'required', maxlength: 255 %>
+    </div>
+
+    <div class="col-12 col-md-6 form-group mb-2">
+      <%= f.label :address %>
+      <%= f.text_field :address, autocomplete: 'address', class: 'form-control', required: 'required', maxlength: 255 %>
+    </div>
+
+    <div class="col-12 col-md-6 form-group mb-2">
+      <%= f.label :email %>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">
+            <span class="material-icons">email</span>
+          </span>
+        </div>
+        <%= f.email_field :email, autocomplete: 'email', class: 'form-control', required: 'required', maxlength: 255 %>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 form-group mb-2">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= t('minimum_password_length', { length: @minimum_password_length }) %>)</em>
+      <% end %>
+      <%= f.password_field :password, autocomplete: 'new-password', class: 'form-control', required: 'required', maxlength: 80 %>
+    </div>
+
+    <div class="col-12 col-md-6 form-group mb-2">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, autocomplete: 'new-password', class: 'form-control', required: 'required', maxlength: 80 %>
+    </div>
+  </div>
+
+  <%= f.button "<span class='material-icons'>save</span>#{t('action.save')}".html_safe, class: 'btn btn-primary' %>
+<% end %>

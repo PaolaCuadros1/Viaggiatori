@@ -1,15 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <title>Viaggiatori</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <title>Viaggiatori</title>
+    <meta name="description" content="<%= t('our_description') %>">
+    <meta property="og:title" content="Viaggiatori" />
+    <meta property="og:description" content="<%= t('our_description') %>" />
+    <meta property="og:url" content="<%= root_url %>" />
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/application/header' %>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <%= render 'layouts/application/footer' %>
   </body>
 </html>

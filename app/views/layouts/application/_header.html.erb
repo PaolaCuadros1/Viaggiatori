@@ -22,8 +22,14 @@
         <a class="nav-link" href="#contactUs">Contáctenos</a>
       </li>
     </ul>
-    <div class="form-inline my-2 my-lg-0">
-      <a class="nav-link" href="#">Iniciar sesión</a>
+    <div class="my-2 my-lg-0">
+      <% if current_user.blank? && current_admin.blank? %>
+        <%= link_to t('action.log_in'), new_user_session_path, class: 'nav-link' %>
+      <% elsif !current_user.blank? %>
+        <%= link_to t('action.log_out'), destroy_user_session_path, class: 'nav-link', method: :delete %>
+      <% else %>
+        <%= link_to t('action.log_out'), destroy_admin_session_path, class: 'nav-link', method: :delete %>
+      <% end %>
     </div>
 
   </div>

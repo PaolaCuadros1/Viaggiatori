@@ -62,4 +62,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'jquery-rails'
-gem 'bootstrap-sass'
+
+# https://github.com/twbs/bootstrap-rubygem
+gem 'bootstrap', '~> 4.5.0'
+
+# https://github.com/heartcombo/devise#starting-with-rails
+gem 'devise'

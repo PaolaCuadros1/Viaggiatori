@@ -1,0 +1,72 @@
+es:
+  action:
+    back: 'Regresar'
+    destroy: 'Eliminar'
+    edit: 'Editar'
+    log_in: 'Iniciar Sesión'
+    log_out: 'Cerrar Sesión'
+    save: 'Guardar'
+    show: 'Mostrar'
+    sign_up: 'Registrarse'
+    update: 'Actualizar'
+    view: 'Ver'
+  activerecord:
+    attributes:
+      admin:
+        zero: 'Administradores'
+        one: 'Administrador'
+        other: 'Administradores'
+        new: 'Nuevo Administrador'
+        editing: 'Editando Administrador'
+        avatar: 'Avatar'
+        email: 'Correo Electrónico'
+        new_password: 'Nueva Contraseña'
+        password: 'Contraseña'
+        current_password: 'Contraseña Actual'
+        password_confirmation: 'Confirmación de Contraseña'
+        first_name: 'Nombres'
+        last_name: 'Apellidos'
+        age: 'Edad'
+        address: 'Dirección'
+        city: 'Ciudad'
+        remember_me: 'Recordar me'
+      user:
+        zero: 'Usuarios'
+        one: 'Usuario'
+        other: 'Usuarios'
+        new: 'Nuevo Usuario'
+        editing: 'Editando Usuario'
+        avatar: 'Avatar'
+        email: 'Correo Electrónico'
+        new_password: 'Nueva Contraseña'
+        password: 'Contraseña'
+        current_password: 'Contraseña Actual'
+        password_confirmation: 'Confirmación de Contraseña'
+        first_name: 'Nombres'
+        last_name: 'Apellidos'
+        age: 'Edad'
+        address: 'Dirección'
+        city: 'Ciudad'
+        remember_me: 'Recordar me'
+    errors:
+      models:
+        admin:
+          attributes:
+            email:
+              blank: 'no puede ser vacio.'
+            password:
+              blank: 'no puede ser vacia.'
+        user:
+          attributes:
+            email:
+              blank: 'no puede ser vacio.'
+            password:
+              blank: 'no puede ser vacia.'
+  minimum_password_length: '%{length} carácteres mínimo'
+  our_description: 'El mejor lugar para viajar'
+  page:
+    log_in:
+      title: 'Inicio de Sesión'
+    sign_up:
+      title: 'Registro'
+  

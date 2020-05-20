@@ -1,9 +1,12 @@
 <div class='devise-container'>
-  <div class='devise-form card'>
-    <h2 class="card-title"><%= t('page.log_in.title') %></h2>
+  <div class="card" style="width: 25rem;">
+    <div class="text-center">
+      <%= image_tag("Logo.png", alt: "Viaggiatori",  class: "card-img-top", style: 'width: 80%;')  -%>
+    </div>
     <div class="card-body">
-
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'needs-validation mb-2', novalidate: ''}) do |f| %>
+      <h5 class="card-title text-center"><%= t('page.log_in.title') %></h5>
+      <div class="card-text">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'needs-validation mb-2', novalidate: ''}) do |f| %>
         <div class="form-group mb-2">
           <%= f.label :email %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', required: 'required', maxlength: 255 %>
@@ -15,16 +18,19 @@
         </div>
 
         <% if devise_mapping.rememberable? %>
-          <div class="custom-control custom-checkbox mb-2">
-            <%= f.check_box :remember_me, class: 'custom-control-input' %>
-            <%= f.label :remember_me, class: 'custom-control-label' %>
-          </div>
+        <div class="custom-control custom-checkbox mb-2">
+          <%= f.check_box :remember_me, class: 'custom-control-input' %>
+          <%= f.label :remember_me, class: 'custom-control-label' %>
+        </div>
         <% end %>
 
         <%= f.submit t('action.log_in'), class: 'btn btn-primary' %>
-      <% end %>
-
-      <%= render "devise/shared/links" %>
+        <% end %>
+      </div>
+      <div class="card-body">
+        <%= render "devise/shared/links" %>
+        <a href="<%= new_admin_session_path %>" class="card-link">Another link</a>
+      </div>
     </div>
   </div>
 </div>

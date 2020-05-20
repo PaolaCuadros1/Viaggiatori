@@ -21,7 +21,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Limelight&display=swap");
 
 :root {
-  --color-big-titles: #ffc000;
+  --yellow-color: #ffc000;
+  --blue-color: #62b9d4;
+  --green-color: #395723;
 }
 
 .name-page{
@@ -41,13 +43,15 @@
 }
 
 .big-titles{
-  color: var(--color-big-titles);
+  color: var(--yellow-color);
   font-size: 90px;
   text-align: center;
   border-bottom: 5px #395723 solid;
 }
 
 .footer{
+   /*position: fixed;
+   width: 100%;*/
    left: 0;
    bottom: 0;
    background-color: black;
@@ -76,4 +80,20 @@
 
 .btn .material-icons {
   margin-right: 0.3rem;
+}
+
+.btn-blue{
+  background: var(--blue-color);
+  border-color: var(--blue-color);
+}
+
+.btn-yellow{
+  background: var(--yellow-color);
+  border-color: var(--yellow-color);
+}
+
+.btn-green{
+  background: var(--green-color);
+  border-color: var(--green-color);
+  color: white;
 }

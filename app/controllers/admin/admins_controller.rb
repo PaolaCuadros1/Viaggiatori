@@ -30,7 +30,7 @@ class Admin::AdminsController < Admin::BaseController
 
     respond_to do |format|
       if @admin.save
-        format.html { redirect_to @admin, notice: 'Admin was successfully created.' }
+        format.html { redirect_to admin_admin_url(@admin), notice: t('activerecord.attributes.admin.admin_created') }
         format.json { render :show, status: :created, location: admin_admin_url(@admin) }
       else
         format.html { render :new }

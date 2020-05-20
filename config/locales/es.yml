@@ -17,19 +17,20 @@ es:
         one: 'Administrador'
         other: 'Administradores'
         new: 'Nuevo Administrador'
-        editing: 'Editando Administrador'
+        editing: 'Información Administrador'
         avatar: 'Avatar'
         email: 'Correo Electrónico'
         new_password: 'Nueva Contraseña'
         password: 'Contraseña'
         current_password: 'Contraseña Actual'
-        password_confirmation: 'Confirmación de Contraseña'
+        password_confirmation: 'Confirmación de Contraseña: '
         first_name: 'Nombres'
         last_name: 'Apellidos'
         age: 'Edad'
         address: 'Dirección'
         city: 'Ciudad'
         remember_me: 'Recordar me'
+        admin_created: 'Administrador creado correctamente'
       user:
         zero: 'Usuarios'
         one: 'Usuario'
@@ -51,11 +52,14 @@ es:
     errors:
       models:
         admin:
+          save_error: 'Error al registrar el administrador'
           attributes:
             email:
               blank: 'no puede ser vacio.'
             password:
               blank: 'no puede ser vacia.'
+            password_confirmation:
+              confirmation: 'Las contraseñas deben coincidir.'
         user:
           attributes:
             email:

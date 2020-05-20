@@ -19,6 +19,11 @@
 
   <body>
     <%= render 'layouts/application/header' %>
+    <% if notice %>
+      <div class="alert alert-primary m-5" >
+        <p id="notice"><%= notice %></p>
+      </div>
+    <% end %>
     <%= yield :hero %>
     <div class="container">
       <%= yield %>

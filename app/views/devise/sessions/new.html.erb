@@ -4,7 +4,7 @@
       <%= image_tag("Logo.png", alt: "Viaggiatori",  class: "card-img-top", style: 'width: 80%;')  -%>
     </div>
     <div class="card-body">
-      <h5 class="card-title text-center"><%= t('page.log_in.title') %></h5>
+      <h5 class="card-title text-center"><%= t('page.log_in.title') %> <%= params['controller'] == 'admins/sessions' ? 'cómo administrador' : '' %></h5>
       <div class="card-text">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'needs-validation mb-2', novalidate: ''}) do |f| %>
         <div class="form-group mb-2">
@@ -24,12 +24,20 @@
         </div>
         <% end %>
 
-        <%= f.submit t('action.log_in'), class: 'btn btn-primary' %>
+        <div class="card-body">
+          <%= f.submit t('action.log_in'), class: 'btn btn-primary float-left' %>
+          <%= render "devise/shared/links" %>
+        </div>
+        
         <% end %>
       </div>
       <div class="card-body">
-        <%= render "devise/shared/links" %>
-        <a href="<%= new_admin_session_path %>" class="card-link">Another link</a>
+        <% if params['controller'] != 'admins/sessions' %>
+          <a href="<%= new_admin_session_path %>" class="card-link">Soy administrador</a>
+        <% else %>
+        <a href="<%= new_user_session_path %>" class="card-link">Soy usuario</a>
+        <% end %>
+        
       </div>
     </div>
   </div>

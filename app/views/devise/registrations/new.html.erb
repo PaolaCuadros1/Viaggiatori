@@ -49,10 +49,13 @@
           <%= f.password_field :password_confirmation, autocomplete: 'new-password', class: 'form-control', required: 'required', maxlength: 80 %>
         </div>
 
-        <%= f.submit t('action.sign_up'), class: 'btn btn-primary' %>
+        <div class="card-body">
+          <%= f.submit t('action.sign_up'), class: 'btn btn-primary float-left' %>
+          <%= render 'devise/shared/links' %>
+        </div>
+
       <% end %>
 
-      <%= render 'devise/shared/links' %>
     </div>
   </div>
 </div>

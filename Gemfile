@@ -68,3 +68,5 @@ gem 'bootstrap', '~> 4.5.0'
 
 # https://github.com/heartcombo/devise#starting-with-rails
 gem 'devise'
+
+gem "paperclip", "~> 6.0.0"

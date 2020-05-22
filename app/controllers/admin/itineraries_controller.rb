@@ -28,7 +28,7 @@ class Admin::ItinerariesController < ApplicationController
 
     respond_to do |format|
       if @itinerary.save
-        format.html { redirect_to @itinerary, notice: 'Itinerary was successfully created.' }
+        format.html { redirect_to admin_itinerary_url(@itinerary), notice: 'Itinerary was successfully created.' }
         format.json { render :show, status: :created, location: @itinerary }
       else
         format.html { render :new }
@@ -69,6 +69,6 @@ class Admin::ItinerariesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def itinerary_params
-      params.require(:itinerary).permit(:title, :place, :value, :discount, :discount_date, :description, :image)
+      params.require(:itinerary).permit(:title, :place, :value, :discount, :discount_date, :description, :image, :avatar)
     end
 end

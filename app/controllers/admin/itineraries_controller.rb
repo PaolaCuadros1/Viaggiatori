@@ -1,4 +1,4 @@
-class ItinerariesController < ApplicationController
+class Admin::ItinerariesController < ApplicationController
   before_action :set_itinerary, only: [:show, :edit, :update, :destroy]
 
   # GET /itineraries

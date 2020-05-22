@@ -27,7 +27,7 @@
         <td><%= itinerary.description %></td>
         <td><%= itinerary.image %></td>
         <td><%= link_to 'Show', itinerary %></td>
-        <td><%= link_to 'Edit', edit_itinerary_path(itinerary) %></td>
+        <td><%= link_to 'Edit', edit_admin_itinerary_path(itinerary) %></td>
         <td><%= link_to 'Destroy', itinerary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Itinerary', new_itinerary_path %>
+<%= link_to 'New Itinerary', new_admin_itinerary_path %>

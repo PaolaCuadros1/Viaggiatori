@@ -1,4 +1,38 @@
 es:
+date:
+    month: "Mes"
+    year: "Año"
+    formats:
+      default: "%d/%m/%Y"
+    month_names:
+      January: "Enero"
+      February: "Febrero"
+      March: "Marzo"
+      April: "Abril"
+      May: "Mayo"
+      June: "Junio"
+      July: "Julio"
+      August: "Agosto"
+      September: "Septiembre"
+      October: "Octubre"
+      November: "Noviembre"
+      December: "Diciembre"
+    abbr_month_names:
+      jan.
+      fév.
+      mar.
+      avr.
+      mai
+      juin
+      juil.
+      août
+      sept.
+      oct.
+      nov.
+      déc.
+  time:
+    formats:
+      full: "%Y/%m/%d à %Hh%M"
   action:
     back: 'Regresar'
     destroy: 'Eliminar'
@@ -31,6 +65,14 @@ es:
         city: 'Ciudad'
         remember_me: 'Recordar me'
         admin_created: 'Administrador creado correctamente'
+        itinerary:
+          title: 'Título'
+          place: 'Título'
+          value: 'Título'
+          discount: 'Título'
+          discount_date: 'Título'
+          description: 'Título'
+          image: 'Título'
       user:
         zero: 'Usuarios'
         one: 'Usuario'
@@ -49,6 +91,14 @@ es:
         address: 'Dirección'
         city: 'Ciudad'
         remember_me: 'Recordar me'
+      itinerary:
+        title: 'Título'
+        place: 'Título'
+        value: 'Título'
+        discount: 'Título'
+        discount_date: 'Título'
+        description: 'Título'
+        image: 'Título'
     errors:
       models:
         admin:

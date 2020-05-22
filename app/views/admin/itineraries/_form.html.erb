@@ -1,0 +1,53 @@
+<%= form_for([:admin, itinerary], html: { multipart: true } ) do |f| %>
+  <% if itinerary.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(itinerary.errors.count, "error") %> prohibited this itinerary from being saved:</h2>
+
+      <ul>
+      <% itinerary.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-row">
+    <div class="col-12 col-md-6 form-group mb-2">
+      <%= f.label :title %>
+      <%= f.text_field :title, autofocus: true, class: 'form-control', required: 'required', maxlength: 255 %>
+    </div>
+
+    <div class="col-12 col-md-6 form-group mb-2">
+      <%= f.label :avatar %>
+      <%= f.file_field :avatar, class: 'form-control', required: 'required' %>
+    </div>
+
+    <div class="col-12 col-md-6 form-group mb-2">
+      <%= f.label :place %>
+      <%= f.text_field :place,  class: 'form-control', required: 'required' %>
+    </div>
+
+    <div class="col-12 col-md-6 form-group mb-2">
+      <%= f.label :value %>
+      <%= f.number_field :value,  class: 'form-control', required: 'required', min: 0, step: 0.01 %>
+    </div>
+
+    <div class="col-12 col-md-6 form-group mb-2">
+      <%= f.label :discount %>
+      <%= f.number_field :discount,  class: 'form-control', required: 'required', min: 0 %>
+    </div>
+
+    <div class="col-12 col-md-6 form-group mb-2">
+      <%= f.label :discount_date %><br/>
+      <%= f.date_select :discount_date,  class: 'form-control', required: 'required' %>
+    </div>
+
+    <div class="col-12 col-md-12 form-group mb-2">
+      <%= f.label :description %>
+      <%= f.text_area :description,  class: 'form-control', required: 'required' %>
+    </div>
+  </div>
+
+  <%= f.button "<span class='material-icons'>save</span>#{t('action.save')}".html_safe, class: 'btn btn-primary' %>
+
+<% end %>

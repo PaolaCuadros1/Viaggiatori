@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :itineraries
   namespace :admin do
     resources :admins
+    resources :itineraries
   end
 
   devise_for :admins, controllers: {

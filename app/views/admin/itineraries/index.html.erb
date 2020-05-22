@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-between align-items-center mt-5 mb-5">
+  <h1><%= t('activerecord.attributes.admin.other') %></h1>
+  <%= link_to 'Registrar itinerario', new_admin_itinerary_path, class: 'btn btn-primary' %>
+</div>
+
+<div class="table-responsive mb-2">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Place</th>
+        <th>Value</th>
+        <th>Discount</th>
+        <th>Discount date</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @itineraries.each do |itinerary| %>
+      <tr>
+        <td><%= itinerary.title %></td>
+        <td><%= itinerary.place %></td>
+        <td><%= itinerary.value %></td>
+        <td><%= itinerary.discount %></td>
+        <td><%= itinerary.discount_date %></td>
+        <td><%= itinerary.description %></td>
+        <td><%= itinerary.image %></td>
+        <td>
+          <%= link_to "<button class='btn btn-yellow' > <span class='material-icons'>visibility</span></button> ".html_safe, admin_itinerary_path(itinerary) %>
+          <%= link_to "<button class='btn btn-blue'><span class='material-icons'>edit</span></button> ".html_safe, edit_admin_itinerary_path(itinerary) %>
+          <%= link_to "<button class='btn btn-danger' ><span class='material-icons'>delete</span></button>".html_safe, admin_itinerary_path(itinerary), method: :delete, data: { confirm: '¿Seguro de eliminar este itinerario?' } %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

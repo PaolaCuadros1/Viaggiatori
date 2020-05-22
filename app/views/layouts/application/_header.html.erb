@@ -11,7 +11,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="menuViaggiatori">
-    <% if params['controller'] == 'admin/admins' %>
+    <% if params['controller'].split('/')[0] == 'admin' %>
       <%= render 'layouts/application/admins/menu' %>
     <% else %>
       <%= render 'layouts/application/users/menu' %>

@@ -1,4 +1,18 @@
 es:
+  date:
+    date: 'Fecha'
+    day: 'Día'
+    month_names: [~, Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre]
+    abbr_month_names: [~, Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic]
+    day_names: [~, Domingo, Lunes, Martes, Miercoles, Jueves, Viernes, Sabado]
+    formats:
+      default: '%Y-%m-%d %H:%M'
+      short: '%Y-%m-%d'
+      large_humanized: 'El %A %d, de %B del %Y a las %I:%M %p'
+    order:
+    - :day
+    - :month
+    - :year
   action:
     back: 'Regresar'
     destroy: 'Eliminar'
@@ -49,6 +63,14 @@ es:
         address: 'Dirección'
         city: 'Ciudad'
         remember_me: 'Recordar me'
+      itinerary:
+        title: 'Título'
+        place: 'Lugar'
+        value: 'Precio'
+        discount: '% de descuento'
+        discount_date: 'Fecha límite del descuento'
+        description: 'Descripción'
+        image: 'Imagen'
     errors:
       models:
         admin:

@@ -1,0 +1,47 @@
+<div class="card mt-5" style="width: 100%">
+  <div class="card-body">
+    <h2 class="card-title text-center mb-5">Itinerario: <%= @itinerary.title %></h2>
+    <div class="card-text mb-5">
+
+      <div class="row mt-2 mb-5">
+        <div class="col text-center">
+          <%= image_tag @itinerary.avatar.url(:thumb) %>
+        </div>
+        
+      </div>
+      <div class="row mt-2">
+        <div class="col">
+          <strong>Place:</strong>
+          <%= @itinerary.place %>
+        </div>
+        <div class="col">
+          <strong>value:</strong>
+          <%= @itinerary.value %>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col">
+          <strong>Discount:</strong>
+          <%= @itinerary.discount %>
+        </div>
+        <div class="col">
+          <strong>Discount date:</strong>
+          <%= @itinerary.discount_date %>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col">
+          <strong>Description:</strong>
+          <%= @itinerary.description %>
+        </div>
+      </div>
+
+    </div>
+    <div class="text-center" >
+      <%= link_to t('action.edit'), edit_admin_itinerary_path(@itinerary), class: 'btn btn-blue mr-1 card-link' %>
+      <%= link_to t('action.back'), admin_itineraries_path, class: 'btn btn-secondary card-link' %>
+    </div>
+  </div>
+</div>

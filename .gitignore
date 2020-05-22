@@ -22,3 +22,5 @@
 
 # Ignore the database configuration
 /config/database.yml
+
+/public/*

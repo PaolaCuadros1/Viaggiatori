@@ -5,13 +5,14 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <title>Viaggiatori</title>
+    <title><%= t('name') %></title>
     <meta name="description" content="<%= t('our_description') %>">
     <meta property="og:title" content="Viaggiatori" />
     <meta property="og:description" content="<%= t('our_description') %>" />
     <meta property="og:url" content="<%= root_url %>" />
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag Ckeditor.cdn_url %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

@@ -1,6 +1,6 @@
 <div class="card mt-5" style="width: 100%">
   <div class="card-body">
-    <h2 class="card-title text-center mb-5">Itinerario: <%= @itinerary.title %></h2>
+    <h2 class="card-title text-center mb-5"><%= t('activerecord.attributes.itinerary.itinerary') %>: <%= @itinerary.title %></h2>
     <div class="card-text mb-5">
 
       <div class="row mt-2 mb-5">
@@ -11,30 +11,30 @@
       </div>
       <div class="row mt-2">
         <div class="col">
-          <strong>Place:</strong>
+          <strong><%= t('activerecord.attributes.itinerary.place') %>:</strong>
           <%= @itinerary.place %>
         </div>
         <div class="col">
-          <strong>value:</strong>
+          <strong><%= t('activerecord.attributes.itinerary.value') %>:</strong>
           <%= @itinerary.value %>
         </div>
       </div>
 
       <div class="row mt-2">
         <div class="col">
-          <strong>Discount:</strong>
+          <strong><%= t('activerecord.attributes.itinerary.discount') %>:</strong>
           <%= @itinerary.discount %>
         </div>
         <div class="col">
-          <strong>Discount date:</strong>
-          <%= @itinerary.discount_date %>
+          <strong><%= t('activerecord.attributes.itinerary.discount') %>:</strong>
+          <%= @itinerary.discount %>
         </div>
       </div>
 
       <div class="row mt-2">
         <div class="col">
-          <strong>Description:</strong>
-          <%= @itinerary.description %>
+          <strong><%= t('activerecord.attributes.itinerary.description') %>:</strong>
+          <%= @itinerary.description.html_safe %>
         </div>
       </div>
 

@@ -4,15 +4,15 @@
 </div>
 
 <div class="table-responsive mb-2">
-  <table class="table table-bordered table-hover">
+  <table class="table table-bordered table-hover" id="viaggitori-table">
     <thead>
       <tr>
         <th><%= t('activerecord.attributes.admin.first_name') %></th>
         <th><%= t('activerecord.attributes.admin.last_name') %></th>
         <th><%= t('activerecord.attributes.admin.email') %></th>
-        <th><%= t('activerecord.attributes.admin.age') %></th>
         <th><%= t('activerecord.attributes.admin.city') %></th>
-        <th><%= t('activerecord.attributes.admin.address') %></th>
+        <th><%= t('activerecord.attributes.admin.role') %></th>
+        <th><%= t('activerecord.attributes.admin.status') %></th>
         <th></th>
       </tr>
     </thead>
@@ -23,9 +23,9 @@
           <td><%= admin.first_name %></td>
           <td><%= admin.last_name %></td>
           <td><%= admin.email %></td>
-          <td><%= admin.age %></td>
           <td><%= admin.city %></td>
-          <td><%= admin.address %></td>
+          <td><%= admin.role %></td>
+          <td><%= admin.status ? 'Activo' : 'Inactivo' %></td>
           <td><%= link_to "<button class='btn btn-yellow' > <span class='material-icons'>visibility</span></button> ".html_safe, admin_admin_path(admin) %>
             <%= link_to "<button class='btn btn-blue'><span class='material-icons'>edit</span></button> ".html_safe, edit_admin_admin_path(admin) %>
             <%= link_to "<button class='btn btn-danger' ><span class='material-icons'>delete</span></button>".html_safe, admin_admin_path(admin), method: :delete, data: { confirm: '¿Seguro de eliminar este administrador?' } %></td>

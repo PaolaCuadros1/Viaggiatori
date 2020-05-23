@@ -42,7 +42,7 @@ class Admin::ItinerariesController < ApplicationController
   def update
     respond_to do |format|
       if @itinerary.update(itinerary_params)
-        format.html { redirect_to @itinerary, notice: 'Itinerary was successfully updated.' }
+        format.html { redirect_to admin_itinerary_url(@itinerary), notice: 'Itinerary was successfully updated.' }
         format.json { render :show, status: :ok, location: @itinerary }
       else
         format.html { render :edit }
@@ -69,6 +69,6 @@ class Admin::ItinerariesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def itinerary_params
-      params.require(:itinerary).permit(:title, :place, :value, :discount, :discount_date, :description, :image, :avatar)
+      params.require(:itinerary).permit(:title, :place, :value, :discount, :description, :image, :avatar, :short_description, :discount_start_date, :discount_end_date)
     end
 end

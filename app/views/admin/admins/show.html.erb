@@ -1,43 +1,44 @@
 <div class="card mt-5" style="width: 100%">
   <div class="card-body">
-    <h2 class="card-title text-center mb-5"><%= t('activerecord.attributes.admin.editing') %></h2>
+    <h2 class="card-title text-center mb-5"><%= t('activerecord.attributes.admin.editing') %> <%= @admin.role %></h2>
     <div class="card-text mb-5">
 
       <div class="row mt-2">
-        <div class="col">
-          <strong><%= t('activerecord.attributes.admin.first_name') %>:</strong>
-          <%= @admin.first_name %>
+        <div class="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 text-right">
+          <%= image_tag @admin.avatar.url(:thumb), style: 'width: 40%;' %>
         </div>
-        <div class="col">
-          <strong><%= t('activerecord.attributes.admin.last_name') %>:</strong>
-          <%= @admin.last_name %>
-        </div>
-      </div>
-
-      <div class="row mt-2">
-        <div class="col">
-          <strong><%= t('activerecord.attributes.admin.age') %>:</strong>
-          <%= @admin.age %>
-        </div>
-        <div class="col">
-          <strong><%= t('activerecord.attributes.admin.city') %>:</strong>
-          <%= @admin.city %>
+        <div class="col-7 mt-5">
+          <span> <%= @admin.identification_card %> </span><br>
+          <span><%= @admin.first_name %> <%= @admin.last_name %></span><br>
+          <span><%= @admin.email %></span><br>
+          <span><%= @admin.city %></span>
         </div>
       </div>
 
-      <div class="row mt-2">
+      <div class="row mt-5">
         <div class="col">
           <strong><%= t('activerecord.attributes.admin.address') %>:</strong>
           <%= @admin.address %>
         </div>
         <div class="col">
-          <strong><%= t('activerecord.attributes.admin.email') %>:</strong>
-          <%= @admin.email %>
+          <strong><%= t('activerecord.attributes.admin.birthdate') %>:</strong>
+          <%= @admin.birthdate %>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col">
+          <strong><%= t('activerecord.attributes.admin.status') %>:</strong>
+          <%= @admin.status ? 'Activo' : 'Inactivo' %>
+        </div>
+        <div class="col">
+          <strong><%= t('activerecord.attributes.admin.role') %>:</strong>
+          <%= @admin.role %>
         </div>
       </div>
 
     </div>
-    <div class="text-center" >
+    <div class="text-center">
       <%= link_to t('action.edit'), edit_admin_admin_path(@admin), class: 'btn btn-blue mr-1 card-link' %>
       <%= link_to t('action.back'), admin_admins_path, class: 'btn btn-secondary card-link' %>
     </div>

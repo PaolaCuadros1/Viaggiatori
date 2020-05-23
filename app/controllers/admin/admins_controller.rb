@@ -44,7 +44,7 @@ class Admin::AdminsController < Admin::BaseController
   def update
     respond_to do |format|
       if @admin.update(admin_params)
-        format.html { redirect_to @admin, notice: 'Admin was successfully updated.' }
+        format.html { redirect_to admin_admin_url(@admin), notice: t('activerecord.attributes.admin.admin_updated') }
         format.json { render :show, status: :ok, location: admin_admin_url(@admin) }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class Admin::AdminsController < Admin::BaseController
   def destroy
     @admin.destroy
     respond_to do |format|
-      format.html { redirect_to admins_url, notice: 'Admin was successfully destroyed.' }
+      format.html { redirect_to admin_admins_path, notice: t('activerecord.attributes.admin.admin_removed') }
       format.json { head :no_content }
     end
   end
@@ -71,6 +71,6 @@ class Admin::AdminsController < Admin::BaseController
 
     # Only allow a list of trusted parameters through.
     def admin_params
-      params.require(:admin).permit(:first_name, :last_name, :age, :city, :address, :email, :password, :password_confirmation)
+      params.require(:admin).permit(:first_name, :last_name, :age, :city, :address, :email, :password, :password_confirmation, :role, :identification_card, :avatar, :birthdate, :status)
     end
 end

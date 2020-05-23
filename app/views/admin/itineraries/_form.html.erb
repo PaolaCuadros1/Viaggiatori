@@ -19,12 +19,7 @@
 
     <div class="col-12 col-md-6 form-group mb-2">
       <%= f.label :avatar %>
-      <%= f.file_field :avatar, class: 'form-control', required: 'required' %>
-    </div>
-
-    <div class="col-12 col-md-6 form-group mb-2">
-      <%= f.label :place %>
-      <%= f.text_field :place,  class: 'form-control', required: 'required' %>
+      <%= f.file_field :avatar, class: 'form-control' %>
     </div>
 
     <div class="col-12 col-md-6 form-group mb-2">
@@ -34,17 +29,33 @@
 
     <div class="col-12 col-md-6 form-group mb-2">
       <%= f.label :discount %>
-      <%= f.number_field :discount,  class: 'form-control', required: 'required', min: 0 %>
+      <%= f.number_field :discount,  class: 'form-control', min: 0 %>
     </div>
 
     <div class="col-12 col-md-6 form-group mb-2">
-      <%= f.label :discount_date %><br/>
-      <%= f.date_select :discount_date,  class: 'form-control', required: 'required' %>
+      <%= f.label :discount_start_date %>
+      <div class="input-group mb-3">
+        <%= f.date_select :discount_start_date, { :order => [:day, :month, :year],
+        :prompt => {day: 'Day', month: 'Month', year: 'Year'}}, class: 'form-control'  %>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 form-group mb-2">
+      <%= f.label :discount_end_date %>
+      <div class="input-group mb-3">
+        <%= f.date_select :discount_end_date, { :order => [:day, :month, :year],
+        :prompt => {day: 'Day', month: 'Month', year: 'Year'}}, class: 'form-control'  %>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-12 form-group mb-2">
+      <%= f.label :short_description %>
+      <%= f.text_area  :short_description,  class: 'form-control', required: 'required', maxlength: 255 %>
     </div>
 
     <div class="col-12 col-md-12 form-group mb-2">
       <%= f.label :description %>
-      <%= f.text_area :description,  class: 'form-control', required: 'required' %>
+      <%= f.cktext_area  :description,  class: 'form-control', required: 'required', ckeditor: { toolbar: 'mini' } %>
     </div>
   </div>
 

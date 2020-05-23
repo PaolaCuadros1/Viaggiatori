@@ -4,7 +4,7 @@
 </div>
 
 <div class="table-responsive mb-2">
-  <table class="table table-bordered table-hover">
+  <table class="table table-bordered table-hover" id="viaggitori-table">
     <thead>
       <tr>
         <th>Title</th>
@@ -12,8 +12,6 @@
         <th>Value</th>
         <th>Discount</th>
         <th>Discount date</th>
-        <th>Description</th>
-        <th>Image</th>
         <th></th>
       </tr>
     </thead>
@@ -25,9 +23,7 @@
         <td><%= itinerary.place %></td>
         <td><%= itinerary.value %></td>
         <td><%= itinerary.discount %></td>
-        <td><%= itinerary.discount_date %></td>
-        <td><%= itinerary.description %></td>
-        <td><%= itinerary.image %></td>
+        <td></td>
         <td>
           <%= link_to "<button class='btn btn-yellow' > <span class='material-icons'>visibility</span></button> ".html_safe, admin_itinerary_path(itinerary) %>
           <%= link_to "<button class='btn btn-blue'><span class='material-icons'>edit</span></button> ".html_safe, edit_admin_itinerary_path(itinerary) %>

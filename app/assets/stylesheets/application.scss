@@ -12,88 +12,89 @@
  *
  *= require_tree .
  *= require_self
+ *= require dataTables/jquery.dataTables
  */
+
 
 /*@import "bootstrap-sprockets";
 @import "bootstrap";*/
+
 @import "bootstrap";
-
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Limelight&display=swap");
-
 :root {
-  --yellow-color: #ffc000;
-  --blue-color: #62b9d4;
-  --green-color: #395723;
+    --yellow-color: #ffc000;
+    --blue-color: #62b9d4;
+    --green-color: #395723;
 }
 
-.name-page{
-  font-family: 'Bungee Inline';
-  font-size: 35px;
+.name-page {
+    font-family: 'Bungee Inline';
+    font-size: 35px;
 }
 
 .item-slider {
-  display: block;
-  width: 100%;
-  height: 100%;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .img-slider {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
-.big-titles{
-  color: var(--yellow-color);
-  font-size: 90px;
-  text-align: center;
-  border-bottom: 5px #395723 solid;
+.big-titles {
+    color: var(--yellow-color);
+    font-size: 90px;
+    text-align: center;
+    border-bottom: 5px #395723 solid;
 }
 
-.footer{
-   /*position: fixed;
+.footer {
+    /*position: fixed;
    width: 100%;*/
-   left: 0;
-   bottom: 0;
-   background-color: black;
-   color: white;
-   height: 140px;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    height: 140px;
 }
 
-.footer-list{
-  list-style: none;
+.footer-list {
+    list-style: none;
 }
 
-.footer-link{
-  color: white;
-  width: 50%;
+.footer-link {
+    color: white;
+    width: 50%;
 }
 
-.footer-link:hover{
-  color: white;
-  border-bottom: 2px solid;
+.footer-link:hover {
+    color: white;
+    border-bottom: 2px solid;
 }
 
 .btn {
-  display: inline-flex;
-  align-items: center;
+    display: inline-flex;
+    align-items: center;
 }
 
 .btn .material-icons {
-  margin-right: 0.3rem;
+    margin-right: 0.3rem;
 }
 
-.btn-blue{
-  background: var(--blue-color);
-  border-color: var(--blue-color);
+.btn-blue {
+    background: var(--blue-color);
+    border-color: var(--blue-color);
 }
 
-.btn-yellow{
-  background: var(--yellow-color);
-  border-color: var(--yellow-color);
+.btn-yellow {
+    background: var(--yellow-color);
+    border-color: var(--yellow-color);
 }
 
-.btn-green{
-  background: var(--green-color);
-  border-color: var(--green-color);
-  color: white;
+.btn-green {
+    background: var(--green-color);
+    border-color: var(--green-color);
+    color: white;
 }

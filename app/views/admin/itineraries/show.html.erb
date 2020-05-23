@@ -27,14 +27,14 @@
         </div>
         <div class="col">
           <strong>Discount date:</strong>
-          <%= @itinerary.discount_date %>
+          <%= @itinerary.discount %>
         </div>
       </div>
 
       <div class="row mt-2">
         <div class="col">
           <strong>Description:</strong>
-          <%= @itinerary.description %>
+          <%= @itinerary.description.html_safe %>
         </div>
       </div>
 

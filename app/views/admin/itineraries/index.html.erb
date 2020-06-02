@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-between align-items-center mt-5 mb-5">
-  <h1><%= t('activerecord.attributes.admin.other') %></h1>
+  <h1>Itinerarios</h1>
   <%= link_to 'Registrar itinerario', new_admin_itinerary_path, class: 'btn btn-primary' %>
 </div>
 
@@ -9,6 +9,7 @@
       <tr>
         <th><%= t('activerecord.attributes.itinerary.title') %></th>
         <th><%= t('activerecord.attributes.itinerary.value') %></th>
+        <th><%= t('activerecord.attributes.itinerary.discount') %></th>
         <th><%= t('activerecord.attributes.itinerary.discount_start_date') %></th>
         <th><%= t('activerecord.attributes.itinerary.discount_end_date') %></th>
         <th></th>
@@ -19,9 +20,10 @@
       <% @itineraries.each do |itinerary| %>
       <tr>
         <td><%= itinerary.title %></td>
-        <td><%= itinerary.value %></td>
-        <td><%= itinerary.discount_start_date %></td>
-        <td><%= itinerary.discount_end_date %></td>
+        <td><%= number_to_currency(itinerary.value) %></td>
+        <td><%= number_to_percentage(itinerary.discount, precision: 0) %></td>
+        <td><%= itinerary.discount_start_date == nil ? 'No aplica' : itinerary.discount_start_date %></td>
+        <td><%= itinerary.discount_end_date == nil ? 'No aplica' : itinerary.discount_start_date %></td>
         <td>
           <%= link_to "<button class='btn btn-yellow' > <span class='material-icons'>visibility</span></button> ".html_safe, admin_itinerary_path(itinerary) %>
           <%= link_to "<button class='btn btn-blue'><span class='material-icons'>edit</span></button> ".html_safe, edit_admin_itinerary_path(itinerary) %>

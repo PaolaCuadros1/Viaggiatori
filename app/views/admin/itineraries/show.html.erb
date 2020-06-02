@@ -11,29 +11,29 @@
       </div>
       <div class="row mt-2">
         <div class="col">
-          <strong><%= t('activerecord.attributes.itinerary.place') %>:</strong>
-          <%= @itinerary.place %>
-        </div>
-        <div class="col">
           <strong><%= t('activerecord.attributes.itinerary.value') %>:</strong>
-          <%= @itinerary.value %>
+          <%= number_to_currency(@itinerary.value) %>
+        </div>
+        <div class="col">
+          <strong><%= t('activerecord.attributes.itinerary.discount') %>:</strong>
+          <%= number_to_percentage(@itinerary.discount, precision: 0) %>
         </div>
       </div>
 
       <div class="row mt-2">
         <div class="col">
-          <strong><%= t('activerecord.attributes.itinerary.discount') %>:</strong>
-          <%= @itinerary.discount %>
+          <strong><%= t('activerecord.attributes.itinerary.discount_start_date') %>:</strong>
+          <%= @itinerary.discount_start_date == nil ? 'No aplica' : itinerary.discount_start_date %>
         </div>
         <div class="col">
-          <strong><%= t('activerecord.attributes.itinerary.discount') %>:</strong>
-          <%= @itinerary.discount %>
+          <strong><%= t('activerecord.attributes.itinerary.discount_end_date') %>:</strong>
+          <%= @itinerary.discount_end_date == nil ? 'No aplica' : itinerary.discount_start_date %>
         </div>
       </div>
 
-      <div class="row mt-2">
+      <div class="row mt-5">
         <div class="col">
-          <strong><%= t('activerecord.attributes.itinerary.description') %>:</strong>
+          <p class="mb-5 text-center"><strong><%= t('activerecord.attributes.itinerary.description') %></strong></p>
           <%= @itinerary.description.html_safe %>
         </div>
       </div>

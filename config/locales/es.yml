@@ -30,7 +30,7 @@ es:
         zero: 'Administradores'
         one: 'Administrador'
         other: 'Usuarios'
-        new: 'Registrar'
+        new: 'Registrar usuario'
         editing: 'Información'
         avatar: 'Avatar'
         email: 'Correo Electrónico'
@@ -42,7 +42,7 @@ es:
         last_name: 'Apellidos'
         age: 'Edad'
         address: 'Dirección'
-        city: 'Ciudad'
+        city: 'Ciudad de residencia'
         role: 'Rol'
         identification_card: 'Documento de identidad'
         avatar: 'Imagen'
@@ -81,7 +81,7 @@ es:
         discount_end_date: 'Fin del descuento'
         short_description: 'Descripción corta'
         description: 'Descripción'
-        new: 'Nuevo itinerario'
+        new: 'Registro itinerario'
         edit: 'Editar itinerario'
     errors:
       models:

@@ -8,6 +8,11 @@ Rails.application.routes.draw do
     sessions: 'admins/sessions'
   }
 
+  namespace :user do
+    resources :users
+    resources :itineraries
+  end
+
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }

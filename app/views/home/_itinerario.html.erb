@@ -12,7 +12,7 @@
         <h5 class="card-title m-3"><%= i.title %> </h5>
         <div class="card-body">
           <p class="card-text text-justify"> <%= i.short_description %> </p>
-          <a href="#" class="btn btn-primary">Conocer más</a>
+          <%= link_to "<button class='btn btn-primary' >Conocer más</button> ".html_safe, user_itinerary_path(i.id) %>
         </div>
       </div>
     </div>

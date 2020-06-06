@@ -1,0 +1,47 @@
+<div class="card mt-5" style="width: 100%">
+  <div class="card-body">
+    <h2 class="card-title text-center mb-5"><%= t('activerecord.attributes.itinerary.itinerary') %>: <%= @itinerary.title %></h2>
+    <div class="card-text mb-5">
+
+      <div class="row mt-2 mb-5">
+        <div class="col text-center">
+          <%= image_tag @itinerary.avatar.url(:thumb) %>
+        </div>
+        
+      </div>
+      <div class="row mt-2">
+        <div class="col">
+          <strong><%= t('activerecord.attributes.itinerary.value') %>:</strong>
+          <%= number_to_currency(@itinerary.value) %>
+        </div>
+        <div class="col">
+          <strong><%= t('activerecord.attributes.itinerary.discount') %>:</strong>
+          <%= number_to_percentage(@itinerary.discount, precision: 0) %>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col">
+          <strong><%= t('activerecord.attributes.itinerary.discount_start_date') %>:</strong>
+          <%= @itinerary.discount_start_date == nil ? 'No aplica' : @itinerary.discount_start_date %>
+        </div>
+        <div class="col">
+          <strong><%= t('activerecord.attributes.itinerary.discount_end_date') %>:</strong>
+          <%= @itinerary.discount_end_date == nil ? 'No aplica' : @itinerary.discount_start_date %>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col">
+          <p class="mb-5 text-center"><strong><%= t('activerecord.attributes.itinerary.description') %></strong></p>
+          <%= @itinerary.description.html_safe %>
+        </div>
+      </div>
+
+    </div>
+    <div class="text-center" >
+      <%= link_to 'Comprar', '#', class: 'btn btn-blue mr-1 card-link' %>
+      <%= link_to t('action.back'), root_path, class: 'btn btn-secondary card-link' %>
+    </div>
+  </div>
+</div>

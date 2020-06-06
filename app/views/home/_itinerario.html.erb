@@ -6,12 +6,16 @@
 
 <div class="row mt-5" id="itinerary">
   <% Itinerary.all.each do |i| %>
-    <div class="col col-sm col-md col-lg col-xl">
+    <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-5">
       <div class="card" style="width: 18rem;">
-        <%= image_tag i.avatar.url(:thumb), style: 'width: 100%; height: 170px;' -%>
-        <h5 class="card-title m-3"><%= i.title %> </h5>
+        <%= image_tag i.avatar.url(:thumb), style: 'width: 100%; height: 150px;' -%>
+        <div class="card-title ml-3 mr-3 mt-3" style="height: 30px;">
+          <h5><%= i.title %> </h5>
+        </div>
         <div class="card-body">
-          <p class="card-text text-justify"> <%= i.short_description %> </p>
+          <div class="card-text text-justify mb-2" style="width:100%; overflow: hidden; height: 200px;">
+            <p> <%= i.short_description %> </p>
+          </div>
           <%= link_to "<button class='btn btn-primary' >Conocer más</button> ".html_safe, user_itinerary_path(i.id) %>
         </div>
       </div>

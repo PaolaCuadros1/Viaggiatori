@@ -23,11 +23,11 @@
       <div class="row mt-2">
         <div class="col">
           <strong><%= t('activerecord.attributes.itinerary.discount_start_date') %>:</strong>
-          <%= @itinerary.discount_start_date == nil ? 'No aplica' : itinerary.discount_start_date %>
+          <%= @itinerary.discount_start_date == nil ? 'No aplica' : @itinerary.discount_start_date %>
         </div>
         <div class="col">
           <strong><%= t('activerecord.attributes.itinerary.discount_end_date') %>:</strong>
-          <%= @itinerary.discount_end_date == nil ? 'No aplica' : itinerary.discount_start_date %>
+          <%= @itinerary.discount_end_date == nil ? 'No aplica' : @itinerary.discount_start_date %>
         </div>
       </div>
 

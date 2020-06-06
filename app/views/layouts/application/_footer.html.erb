@@ -11,9 +11,9 @@
     <% if !current_admin %>
     <div class="col col-sm col-md col-lg col-xl">
       <ul class="footer-list">
-        <li><a class="nav-link footer-link" href="#itinerary-title">Itinerarios</a></li>
-        <li><a class="nav-link footer-link" href="#contactUs-title">Contáctenos</a></li>
-        <li><a class="nav-link footer-link" href="#">Iniciar sesión</a></li>
+        <li><%= link_to 'Itinerarios', "#{root_path}#itinerary", class: 'nav-link footer-link' %></li>
+        <li><%= link_to 'Contáctenos', "#{root_path}#contactUs-title", class: 'nav-link footer-link' %></li>
+        <li><%= link_to 'Iniciar sesión', new_user_session_path, class: 'nav-link footer-link' %></li>
       </ul>
     </div>
     <% end %>

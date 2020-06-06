@@ -1,11 +1,11 @@
 <ul class="navbar-nav mr-auto">
   <li class="nav-item active">
-    <a class="nav-link" href="#">Inicio</a>
+  <%= link_to 'Inicio', "#{root_path}", class: 'nav-link' %>
   </li>
   <li class="nav-item active">
-    <a class="nav-link" href="#itinerary">Itinerarios</a>
+  <%= link_to 'Itinerarios', "#{root_path}#itinerary", class: 'nav-link' %>
   </li>
   <li class="nav-item active">
-    <a class="nav-link" href="#contactUs">Contáctenos</a>
+  <%= link_to 'Contáctenos', "#{root_path}#contactUs", class: 'nav-link' %>
   </li>
 </ul>

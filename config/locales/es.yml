@@ -70,6 +70,10 @@ es:
         address: 'Dirección'
         city: 'Ciudad'
         remember_me: 'Recordar me'
+        identification_card: 'Documento de identificación'
+        birthdate: 'Fecha de nacimiento'
+        area_to_travel: 'Destino de viaje'
+        smoke: '¿Fumas?'
       itinerary:
         itineraries: 'Itinerarios'
         itinerary: 'Itinerario'

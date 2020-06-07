@@ -56,3 +56,14 @@ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/syst
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+
+desc 'Yarn install'
+task :yarn_install do
+  on release_roles([:app]) do
+    within release_path do
+      execute :yarn, 'install'
+    end
+  end
+end
+
+after 'bundler:install', :yarn_install
